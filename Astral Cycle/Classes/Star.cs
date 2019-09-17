@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,8 +70,8 @@ namespace TestConsole
     {
         public StarCharacteristics Characteristics;
 
-        public Star(string name, double radius, double weight, StarCharacteristics characteristics)
-            :base(name,radius,weight, characteristics.KelvinTemperature)
+        public Star(string name, double radius, double weight, StarCharacteristics characteristics, Point position)
+            :base(name,radius,weight, characteristics.KelvinTemperature, position)
         {
             Characteristics = characteristics;
         }
