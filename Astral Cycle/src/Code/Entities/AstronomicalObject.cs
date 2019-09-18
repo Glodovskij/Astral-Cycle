@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace TestConsole
+namespace Astral_Cycle.src.Code.Entities
 {
     public abstract class AstronomicalObject
     {
