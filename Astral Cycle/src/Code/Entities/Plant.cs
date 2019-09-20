@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Astral_Cycle.src.Code.Entities
 {
-    public class Plant : Organism
+    class Plant : Organism
     {
         public Plant(string name, int hpTicks, Texture2D texture)
             :base(name, hpTicks, texture)
