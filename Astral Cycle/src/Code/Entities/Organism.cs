@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Astral_Cycle.src.Code.Entities
 {
-    abstract class Organism
+    public abstract class Organism
     {
         protected string Name { get; set; }
         protected int HPTicks { get; set; }

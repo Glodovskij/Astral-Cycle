@@ -13,7 +13,7 @@ namespace Astral_Cycle.src.Code.Entities
         Predatory,
         Omnivores //Всеядные
     }
-    class Animal : Organism
+    public class Animal : Organism
     {
         public AnimalsType AnimalType { get; set; }
 

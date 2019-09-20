@@ -13,7 +13,7 @@ namespace Astral_Cycle.src.Code.Entities
         GiantLike, //Планеты гиганты
         DwarfLike //Карлики
     }
-    class Planet : AstronomicalObject
+    public class Planet : AstronomicalObject
     {
         public PlanentsType PlanentsType { get; set; }
 
