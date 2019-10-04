@@ -18,24 +18,60 @@ namespace Astral_Cycle.src.Code.Entities
         public PlanentsType PlanentsType { get; set; }
 
         private Dictionary<string, float> atmosphere = new Dictionary<string, float>();
+        private List<Animal> herbivorous = new List<Animal>();
+        private List<Animal> omnivores = new List<Animal>();
+        private List<Animal> predatory = new List<Animal>();
+        private List<Plant> plants = new List<Plant>();
+
+
 
         public bool IsHabitable { get; set; }
 
-        public List<Animal> Herbivorous { get; set; } = new List<Animal>();
-        public List<Animal> Omnivores { get; set; } = new List<Animal>();
-        public List<Animal> Predatory { get; set; } = new List<Animal>();
-        public List<Plant> Plants { get; set; } = new List<Plant>();
 
-        public Planet(string name, double radius, double weight, double temperature, Point position, 
-            bool isHabitable, Dictionary<string, float> atmosphere, List<Animal> herbivorous,
-            List<Animal> omnivores, List<Animal> predatory, List<Plant> plants)
-            :base(name, radius, weight, temperature, position)
+
+        public List<Animal> Herbivorous
         {
-            Herbivorous = herbivorous;
-            Omnivores = omnivores;
-            Predatory = predatory;
-            Plants = plants;
+            get
+            {
+                return herbivorous;
+            }
+            set
+            {
+                if (IsHabitable)
+                    herbivorous = value;
+            }
+        }
+        public List<Animal> Omnivores {
+            get { return omnivores; }
+            set
+            {
+                if (IsHabitable)
+                    omnivores = value;
+            }
+        }
+        public List<Animal> Predatory {
+            get { return predatory; }
+            set
+            {
+                if (IsHabitable)
+                    predatory = value;
+            }
+        }
+        public List<Plant> Plants
+        {
+            get { return plants; }
+            set
+            {
+                if (IsHabitable)
+                    plants = value;
+            }
 
+        }
+
+        public Planet(string name, double radius, double weight, double temperature, Point position,
+            bool isHabitable, Dictionary<string, float> atmosphere)
+            : base(name, radius, weight, temperature, position)
+        {
             IsHabitable = isHabitable;
 
             this.atmosphere = atmosphere;
