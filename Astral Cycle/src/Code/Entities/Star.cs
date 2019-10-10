@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Astral_Cycle.src.Code.Entities
 {
-    enum StarType
+    public enum StarType
     {
         Blue,
         Yellow,
         Red
     }
     
-    class Star : AstronomicalObject
+    public class Star : AstronomicalObject
     {
         private StarType type;
         public StarType Type
@@ -131,6 +131,10 @@ namespace Astral_Cycle.src.Code.Entities
         {
             type = starType;
             SetTemperatureZones();
+        }
+        public Star()
+        {
+
         }
     }
 }

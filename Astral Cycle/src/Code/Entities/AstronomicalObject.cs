@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Astral_Cycle.src.Code.Entities
 {
-    abstract class AstronomicalObject
+    public abstract class AstronomicalObject
     {
         public string Name { get; set; }
         public double Radius { get; set; }
@@ -41,6 +41,10 @@ namespace Astral_Cycle.src.Code.Entities
             Radius = radius;
             Weight = weight;
             Position = position;
+        }
+        public AstronomicalObject()
+        {
+
         }
     }
 }

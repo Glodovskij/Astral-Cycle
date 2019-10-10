@@ -1,9 +1,6 @@
 ﻿using Astral_Cycle.src.Code.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 
 namespace Astral_Cycle.src.Code.Generator
 {
@@ -16,20 +13,20 @@ namespace Astral_Cycle.src.Code.Generator
             return randomizer.Next(1, 10);
         }
 
-        /*public void GenerateStar(out Star star)
+        public static void GenerateStar(out Star star)
         {
+            Random randomizer = new Random();
             double starRadius = randomizer.Next(347755, 1391020);
             double starWeight = (starRadius * 1.989E30) / 695510;
             star = new Star() {
+                Type = (StarType)randomizer.Next(0, Enum.GetValues(typeof(StarType)).Length),
                 Name = "Object-" + randomizer.Next(1, 100),
                 Radius = starRadius,
                 Weight = 1.989E30 * starWeight,
-                //Temperature = StarCharacteristics,
-                
-                
+                Position = Point.Zero
             };
 
-        }*/
+        }
         
     }
 }
