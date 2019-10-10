@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Astral_Cycle.src.Code.Entities
 {
-    enum AnimalsType
+    public enum AnimalsType
     {
        /*травоядный*/ Herbivorous,
         Predatory,
         Omnivores //Всеядные
     }
-    class Animal : Organism
+    public class Animal : Organism
     {
         public AnimalsType AnimalType { get; set; }
 

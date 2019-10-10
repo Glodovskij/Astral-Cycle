@@ -25,7 +25,19 @@ namespace Astral_Cycle.src.Code.Generator
                 Weight = 1.989E30 * starWeight,
                 Position = Point.Zero
             };
+            star.SetTemperatureZones();
 
+        }
+        public static void GeneratePlanet(out Planet planet)
+        {
+            Random randomizer = new Random();
+            planet = new Planet()
+            {
+                PlanentsType = (PlanentsType)randomizer.Next(0, Enum.GetValues(typeof(PlanentsType)).Length),
+                Name = "Object-" + randomizer.Next(1, 100),
+                
+
+            };
         }
         
     }

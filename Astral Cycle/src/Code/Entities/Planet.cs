@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Astral_Cycle.src.Code.Entities
 {
-    enum PlanentsType
+    public enum PlanentsType
     {
         EarthLike, //Подобные земле
         GiantLike, //Планеты гиганты
         DwarfLike //Карлики
     }
-    class Planet : AstronomicalObject
+    public class Planet : AstronomicalObject
     {
         public PlanentsType PlanentsType { get; set; }
 
@@ -77,6 +77,10 @@ namespace Astral_Cycle.src.Code.Entities
             IsHabitable = isHabitable;
 
             this.atmosphere = atmosphere;
+        }
+        public Planet()
+        {
+
         }
 
     }

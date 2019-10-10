@@ -13,7 +13,7 @@ namespace Astral_Cycle.src.Code.Entities
         Yellow,
         Red
     }
-    
+
     public class Star : AstronomicalObject
     {
         private StarType type;
@@ -103,11 +103,6 @@ namespace Astral_Cycle.src.Code.Entities
         {
             get
             {
-                return base.Temperature;
-            }
-
-            set
-            {
                 double temperatureValue = 0;
                 Random rnd = new Random();
                 switch (this.Type)
@@ -123,7 +118,10 @@ namespace Astral_Cycle.src.Code.Entities
                         break;
                 }
                 base.Temperature = temperatureValue;
+
+                return base.Temperature;
             }
+
         }
 
         public Star(string name, double radius, double weight, StarType starType, Point position)
