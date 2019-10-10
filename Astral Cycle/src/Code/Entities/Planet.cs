@@ -23,7 +23,7 @@ namespace Astral_Cycle.src.Code.Entities
         private List<Animal> predatory = new List<Animal>();
         private List<Plant> plants = new List<Plant>();
 
-
+        public override double Temperature { get => base.Temperature; set => base.Temperature = value; }
 
         public bool IsHabitable { get; set; }
 
@@ -70,8 +70,10 @@ namespace Astral_Cycle.src.Code.Entities
 
         public Planet(string name, double radius, double weight, double temperature, Point position,
             bool isHabitable, Dictionary<string, float> atmosphere)
-            : base(name, radius, weight, temperature, position)
+            : base(name, radius, weight, position)
         {
+            Temperature = temperature;
+
             IsHabitable = isHabitable;
 
             this.atmosphere = atmosphere;

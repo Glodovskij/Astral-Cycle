@@ -9,7 +9,7 @@ namespace Astral_Cycle.src.Code.Entities
         public string Name { get; set; }
         public double Radius { get; set; }
         public double Weight { get; set; }
-        public double Temperature { get; set; }
+        public virtual double Temperature { get; set; }
         //Насчет пересчета позиции:
         //1. Вариант поставить все на Event и создать метод на подобии OnPositionChanged()
         //2. Создать метод ChangePosition(Point newPosition) и вызывать его при смене позиции
@@ -35,12 +35,11 @@ namespace Astral_Cycle.src.Code.Entities
         }
 
         //Position можно исключить из конструктора, но тогда стартовой точкой все объекты должны иметь (0,0)
-        public AstronomicalObject(string name, double radius, double weight, double temperature, Point position)
+        public AstronomicalObject(string name, double radius, double weight, Point position)
         {
             Name = name;
             Radius = radius;
             Weight = weight;
-            Temperature = temperature;
             Position = position;
         }
     }
