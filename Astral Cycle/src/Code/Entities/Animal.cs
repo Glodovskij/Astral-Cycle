@@ -22,7 +22,16 @@ namespace Astral_Cycle.src.Code.Entities
         {
             AnimalType = animalType;
         }
+        public Animal(AnimalsType animalType)
+        {
+            AnimalType = animalType;
+        }
+        public Animal(string name, int hpTicks, Texture2D texture)
+            : base(name, hpTicks, texture)
+        {
 
+        }
+        
         public bool Eat(Animal animal)
         {
             //Animan eats another animal with 50 % chanse if:

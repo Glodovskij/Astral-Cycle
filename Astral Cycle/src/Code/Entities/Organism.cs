@@ -8,17 +8,21 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Astral_Cycle.src.Code.Entities
 {
-    public abstract class Organism
+    public class Organism
     {
-        protected string Name { get; set; }
-        protected int HPTicks { get; set; }
-        protected Texture2D Texture { get; set; }
+        public string Name { get; set; }
+        public int HPTicks { get; set; }
+        public Texture2D Texture { get; set; }
 
-        protected Organism(string name, int hpTicks, Texture2D texture)
+        public Organism(string name, int hpTicks, Texture2D texture)
         {
             Name = name;
             HPTicks = hpTicks;
             Texture = texture;
+        }
+        public Organism()
+        {
+
         }
 
         protected bool Breed(Organism organism)

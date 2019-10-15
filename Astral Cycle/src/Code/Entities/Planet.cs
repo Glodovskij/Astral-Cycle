@@ -13,21 +13,44 @@ namespace Astral_Cycle.src.Code.Entities
         GiantLike, //Планеты гиганты
         DwarfLike //Карлики
     }
+    public enum AtmosphereElement
+    {
+        CarbonDioxide,
+        Nitrogen,
+        SulfurDioxide,
+        Argon,
+        Watervapor,
+        CarbonMonoxide,
+        Helium,
+        Neon,
+        HydrogenChlodire,
+        Oxygen,
+        Methane,
+        Krypton
+    }
     public class Planet : AstronomicalObject
     {
-        public PlanentsType PlanentsType { get; set; }
+        public PlanentsType? PlanentsType { get; set; }
 
-        private Dictionary<string, float> atmosphere = new Dictionary<string, float>();
+        private Dictionary<AtmosphereElement, int> atmosphere = new Dictionary<AtmosphereElement, int>();
         private List<Animal> herbivorous = new List<Animal>();
         private List<Animal> omnivores = new List<Animal>();
         private List<Animal> predatory = new List<Animal>();
         private List<Plant> plants = new List<Plant>();
 
+
         public override double Temperature { get => base.Temperature; set => base.Temperature = value; }
 
+
+        public Dictionary<AtmosphereElement, int> Atmosphere
+        {
+            get { return Atmosphere; }
+            set { atmosphere = value; }
+        }
+
+
         public bool IsHabitable { get; set; }
-
-
+        public bool IsLifePossible { get; set; }
 
         public List<Animal> Herbivorous
         {
@@ -69,7 +92,7 @@ namespace Astral_Cycle.src.Code.Entities
         }
 
         public Planet(string name, double radius, double weight, double temperature, Point position,
-            bool isHabitable, Dictionary<string, float> atmosphere)
+            bool isHabitable, Dictionary<AtmosphereElement, int> atmosphere)
             : base(name, radius, weight, position)
         {
             Temperature = temperature;
