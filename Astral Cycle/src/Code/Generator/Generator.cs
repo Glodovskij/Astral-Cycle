@@ -50,7 +50,7 @@ namespace Astral_Cycle.src.Code.Generator
                 Radius = randomizer.Next(2000, 70000),
                 Temperature = 100,
                 Weight = randomizer.NextDouble() * (1.898E27 - 3.285E23 + 3.285E23),
-                s
+                
         };
            // planet.Temperature = ((star.CriticalHotZone.Item1 + star.CriticalColdZone.Item2) / 100 * )
             planet.IsLifePossible = CheckTempZone(planet.Position, star);

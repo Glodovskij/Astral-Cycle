@@ -46,6 +46,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Code\Entities\Animal.cs" />
+    <Compile Include="src\Code\Entities\Animals\Animals\Herbivorous.cs" />
+    <Compile Include="src\Code\Entities\Animals\Animals\Omnivores.cs" />
+    <Compile Include="src\Code\Entities\Animals\Animals\Predatory.cs" />
+    <Compile Include="src\Code\Entities\Animals\Factories\HerbivorousFactory.cs" />
+    <Compile Include="src\Code\Entities\Animals\Factories\OmnivoresFactory.cs" />
+    <Compile Include="src\Code\Entities\Animals\Factories\PredatoryFactory.cs" />
+    <Compile Include="src\Code\Entities\Animals\IAnimalFactory.cs" />
+    <Compile Include="src\Code\Entities\Animals\IOrganism.cs" />
     <Compile Include="src\Code\Entities\AstronomicalObject.cs" />
     <Compile Include="src\Code\Entities\Organism.cs" />
     <Compile Include="src\Code\Entities\Planet.cs" />
