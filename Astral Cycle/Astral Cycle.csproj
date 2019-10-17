@@ -52,6 +52,7 @@
     <Compile Include="src\Code\Entities\Plant.cs" />
     <Compile Include="src\Code\Entities\Star.cs" />
     <Compile Include="src\Code\Generator\Generator.cs" />
+    <Compile Include="src\Code\Generator\SystemCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
